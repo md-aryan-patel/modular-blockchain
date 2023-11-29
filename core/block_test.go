@@ -12,11 +12,11 @@ import (
 
 func TestHeader_Encode_Decode(t *testing.T) {
 	h := &Header{
-		Version: 1,
+		Version:   1,
 		PrevBlock: types.RandomHash(),
 		Timestamp: uint64(time.Now().UnixNano()),
-		Height: 10,
-		Nonce: 12,
+		Height:    10,
+		Nonce:     12,
 	}
 
 	buf := &bytes.Buffer{}
@@ -30,11 +30,11 @@ func TestHeader_Encode_Decode(t *testing.T) {
 func TestBlock_Encode_Decode(t *testing.T) {
 	b := &Block{
 		Header: Header{
-			Version: 1,
+			Version:   1,
 			PrevBlock: types.RandomHash(),
 			Timestamp: uint64(time.Now().UnixNano()),
-			Height: 10,
-			Nonce: 12,
+			Height:    10,
+			Nonce:     12,
 		},
 		Transactions: nil,
 	}
@@ -51,11 +51,11 @@ func TestBlock_Encode_Decode(t *testing.T) {
 func TestHash(t *testing.T) {
 	b := &Block{
 		Header: Header{
-			Version: 1,
+			Version:   1,
 			PrevBlock: types.RandomHash(),
 			Timestamp: uint64(time.Now().UnixNano()),
-			Height: 10,
-			Nonce: 12,
+			Height:    10,
+			Nonce:     12,
 		},
 		Transactions: nil,
 	}
